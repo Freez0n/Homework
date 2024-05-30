@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.desktop2.LibraryController">
+    <TableView fx:id="LibraryTable" layoutX="59.0" layoutY="50.0" prefHeight="200.0" prefWidth="486.0">
+        <columns>
+            <TableColumn fx:id="idBook" prefWidth="62.0" text="ID" />
+            <TableColumn fx:id="nameBook" prefWidth="164.4000015258789" text="Book" />
+            <TableColumn fx:id="nameAuthor" prefWidth="154.0" text="Author" />
+            <TableColumn fx:id="nameGenre" prefWidth="106.39996948242185" text="Genre" />
+        </columns>
+    </TableView>
+
+    <Label layoutX="90.0" layoutY="276.0" text="Название книги" />
+    <TextField fx:id="bookTitleField" layoutX="59.0" layoutY="307.0" prefWidth="150.0" />
+
+    <Label layoutX="263.0" layoutY="276.0" prefHeight="18.0" prefWidth="77.0" text="Имя автора" />
+    <TextField fx:id="authorNameField" layoutX="225.0" layoutY="307.0" prefWidth="150.0" />
+
+    <Label layoutX="445.0" layoutY="277.0" text="Жанр" />
+    <TextField fx:id="genreNameField" layoutX="386.0" layoutY="307.0" prefWidth="150.0" />
+
+    <Button fx:id="addButton" layoutX="249.0" layoutY="360.0" onAction="#addButtonClicked" text="Добавить книгу" />
+</AnchorPane>
