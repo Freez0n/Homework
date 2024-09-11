@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продуктовый склад</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" href="cart.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1>Продуктовый склад</h1>
+        </div>
+        <div class="header-center">
+            <p>НА РЫНКЕ УЖЕ БОЛЕЕ 80 ЛЕТ!</p>
+        </div>
+        <div class="header-right">
+            <nav>
+                <a href="index.html">Каталог</a>
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <header>
+                <h1>Поиск</h1>
+            </header>
+            <input type="text" id="search" placeholder="Поиск по товарам">
+            <select id="categoryFilter">
+                <option value="">Все категории</option>
+                <option value="Фрукты">Фрукты</option>
+                <option value="Овощи">Овощи</option>
+                <option value="Молочные продукты">Молочные продукты</option>
+                <option value="Зерновые">Зерновые</option>
+                <option value="Мясо">Мясо</option>
+                <!-- Добавьте дополнительные категории сюда -->
+            </select>
+        </aside>
+        <main id="productList">
+            
+        </main>
+    </div>
+    
+    <!-- Корзина -->
+    <div id="cartIcon">
+        <img src="cart.png" alt="Корзина">
+        <span id="cartCount">0</span>
+    </div>
+
+    <div id="cartPopup" class="hidden">
+        <h2>Корзина</h2>
+        <ul id="cartItems">
+        
+        </ul>
+        <button id="orderButton">Заказать</button>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Продуктовый склад. Все права защищены.</p>
+            <nav>
+                <a href="confidentiality.html">Политика конфиденциальности</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
