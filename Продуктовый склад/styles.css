@@ -105,6 +105,7 @@ main {
     box-sizing: border-box;
     position: relative;
     max-height: 330px;
+    max-width: 200px;
 }
 
 .product img {

@@ -27,15 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Свинина', price: 1750, category: 'Мясо', image: 'img/pig.jpg' },
         { name: 'Апельсины', price: 900, category: 'Фрукты', image: 'img/orange.jpg' },
         { name: 'Помидоры', price: 395, category: 'Овощи', image: 'img/tomato.jpg' },
-        { name: 'Сливочное масло 85% жира', price: 1600, category: 'Молочные продукты', image: 'img/butter.jpg' },
+        { name: 'Сливочное масло 82% жира', price: 1600, category: 'Молочные продукты', image: 'img/butter.jpg' },
         { name: 'Пшеничная крупа', price: 140, category: 'Зерновые', image: 'img/wheat.jpg' },
         { name: 'Баранина', price: 1165, category: 'Мясо', image: 'img/mutton.jpg' },
         // Добавьте дополнительные товары сюда
     ];
 
-    // Загружаем товары
+    
     function loadProducts() {
-        productList.innerHTML = ''; // Очистить список товаров
+        productList.innerHTML = ''; 
         products.forEach(product => {
             const productDiv = document.createElement('div');
             productDiv.classList.add('product');
@@ -49,20 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
             productList.appendChild(productDiv);
         });
 
-        // Обработчик клика по кнопке "Добавить в корзину"
+    
         document.querySelectorAll('.add-to-cart').forEach(button => {
             button.addEventListener('click', (event) => {
                 const product = event.target.closest('.product');
                 const productName = product.querySelector('h2').textContent;
                 
-                // Добавляем товар в корзину
                 cart.push(productName);
                 updateCart();
             });
         });
     }
 
-    // Обновление содержимого корзины
+
     function updateCart() {
         cartItemsList.innerHTML = '';
         cart.forEach(item => {
@@ -73,20 +72,18 @@ document.addEventListener('DOMContentLoaded', () => {
         cartCount.textContent = cart.length;
     }
 
-    // Обработчик клика по значку корзины
     cartIcon.addEventListener('click', () => {
         cartPopup.classList.toggle('hidden');
     });
 
-    // Обработчик клика по кнопке "Заказать"
     orderButton.addEventListener('click', () => {
         alert('Спасибо за заказ!');
-        cart.length = 0; // Очистить корзину
+        cart.length = 0; 
         updateCart();
         cartPopup.classList.add('hidden');
     });
 
-    // Фильтрация товаров
+
     searchInput.addEventListener('input', filterProducts);
     categoryFilter.addEventListener('change', filterProducts);
 
@@ -108,6 +105,5 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Изначальная загрузка товаров
     loadProducts();
 });
